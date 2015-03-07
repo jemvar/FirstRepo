@@ -7,21 +7,39 @@
 	<?php
 		if(isset($_POST['submit']))
 		{
-			printf('UserName: %s <br>
-				   Password: %s <br>
-				   Gender: %s <br>
-				   Color: %s <br>
-				   Languages: %s <br>
-				   Comments: %s <br>
-				   T and C: %s <br>'
-				   ,$_POST['name']
-				   ,$_POST['password']
-				   ,$_POST['gender']
-				   ,$_POST['colour']
-				   ,implode(" ", $_POST['Languages'])
-				   ,$_POST['comments']
-				   ,$_POST['tc']
-				   );
+			$ok = true;
+			if (!isset($_POST['name']) || $_POST['name'] === '')
+				$ok = false;
+			if (!isset($_POST['password']) || $_POST['password'] === '')
+				$ok = false;
+			if (!isset($_POST['gender']) || $_POST['gender'] === '')
+				$ok = false;
+			if (!isset($_POST['colour']) || $_POST['colour'] === '')
+				$ok = false;
+			if (!isset($_POST['comments']) || $_POST['comments'] === '')
+				$ok = false;
+			if (!isset($_POST['tc']) || $_POST['tc'] === '')
+				$ok = false;
+			if (!isset($_POST['Languages']) || !is_array($_POST['Languages']) || count($_POST['Languages']) === 0) 
+				$ok = false;
+			if($ok)
+			{
+				printf('UserName: %s <br>
+					   Password: %s <br>
+					   Gender: %s <br>
+					   Color: %s <br>
+					   Languages: %s <br>
+					   Comments: %s <br>
+					   T and C: %s <br>'
+					   ,htmlspecialchars($_POST['name'])
+					   ,htmlspecialchars($_POST['password'])
+					   ,htmlspecialchars($_POST['gender'])
+					   ,htmlspecialchars($_POST['colour'])
+					   ,htmlspecialchars(implode(" ", $_POST['Languages']))
+					   ,htmlspecialchars($_POST['comments'])
+					   ,htmlspecialchars($_POST['tc'])
+					   );
+			}
 		}
 	?>
 	<form method="post" action="">
@@ -32,6 +50,7 @@
 		<input type="radio" name="gender" value="m">male<br>
 		Favourite Color:
 		<select name="colour">
+			<option value="">Please Select a Colour</option>
 			<option value="#f00">red</option>
 			<option value="#0f0">green</option>
 			<option value="#00f">blue</option>
