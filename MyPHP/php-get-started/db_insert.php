@@ -5,13 +5,12 @@
 </head>
 <body>
 	<?php
+		$name = '';
+		$gender = '';
+		$colour = '';
 		if(isset($_POST['submit']))
 		{
 			$ok = true;
-			$name = '';
-			$gender = '';
-			$colour = '';
-
 			if (!isset($_POST['name']) || $_POST['name'] === '')
 				$ok = false;
 			else
@@ -28,7 +27,7 @@
 			if($ok)
 			{
 				$db = mysqli_connect('localhost' ,'root', '', 'php');
-				$sql = sprintf("INSERT INTO users (name, gender, colour) VALUES ('%s','%s','%s')",
+				$sql = sprintf("INSERT INTO users (name, gender, color) VALUES ('%s','%s','%s')",
 							   mysqli_real_escape_string($db, $name),
 							   mysqli_real_escape_string($db, $gender),
 							   mysqli_real_escape_string($db, $colour)
