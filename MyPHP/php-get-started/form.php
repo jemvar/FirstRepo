@@ -5,16 +5,15 @@
 </head>
 <body>
 	<?php
+		$name = '';
+		$gender = '';
+		$colour = '';
+		$comments = '';
+		$tc = '';
+		$languages = array();
 		if(isset($_POST['submit']))
 		{
 			$ok = true;
-			$name = '';
-			$gender = '';
-			$colour = '';
-			$comments = '';
-			$tc = '';
-			$languages = array();
-
 			if (!isset($_POST['name']) || $_POST['name'] === '')
 				$ok = false;
 			else
