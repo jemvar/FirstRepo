@@ -5,6 +5,7 @@
 </head>
 <body>
 	<?php
+		readfile('navigation.html');
 		if(isset($_GET['id']) && ctype_digit($_GET['id']))
 			$id = $_GET['id'];
 		else

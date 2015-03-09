@@ -5,6 +5,7 @@
 </head>
 <body>
 	<?php
+		readfile('navigation.html');
 		$name = '';
 		$gender = '';
 		$colour = '';

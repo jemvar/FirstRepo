@@ -6,6 +6,7 @@
 <body>
 <ul>
 	<?php
+		readfile('navigation.html');
 		$db = mysqli_connect('localhost', 'root', '', 'php');
 		$sql = "SELECT * FROM users";
 		$result = mysqli_query($db, $sql);
