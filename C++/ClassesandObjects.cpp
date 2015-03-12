@@ -10,5 +10,8 @@ int main(int argc, char const *argv[])
 		Tweeter p1("Aashi","Malhotra",221,"@aashi");
 	}
 	cout<<"Exiting Function main"<<endl;
+	cout<<p.getName()<<" "<<p.getNumber()<<endl;
+	p.setNumber(1);
+	cout<<p.getName()<<" "<<p.getNumber()<<endl;
 	return 0;
 }
