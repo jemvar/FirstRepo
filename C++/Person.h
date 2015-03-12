@@ -1,6 +1,5 @@
 #include <string>
-#ifndef Person_H
-#define Person_H 
+#pragma once
 
 class Person
 {
@@ -13,4 +12,3 @@ public:
 	~Person();
 	
 };
-#endif
