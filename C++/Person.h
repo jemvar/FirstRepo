@@ -1,4 +1,7 @@
 #include <string>
+#ifndef Person_H
+#define Person_H 
+
 class Person
 {
 private:
@@ -10,3 +13,4 @@ public:
 	~Person();
 	
 };
+#endif
