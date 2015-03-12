@@ -1,12 +1,13 @@
 #include "Person.h"
 #include <iostream>
+using namespace std;
 
-Person::Person(std::string first, std::string last, int arbitrary):firstname(first), lastname(last), arbitrarynumber(arbitrary)
+Person::Person(string first, string last, int arbitrary):firstname(first), lastname(last), arbitrarynumber(arbitrary)
 {
-	std::cout<<"Constructing "<<firstname<<" "<<lastname<<std::endl;
+	cout<<"Constructing "<<firstname<<" "<<lastname<<endl;
 }
 
 Person::~Person()
 {
-	std::cout<<"Destructing "<<firstname<<" "<<lastname<<std::endl;
+	cout<<"Destructing "<<firstname<<" "<<lastname<<endl;
 }

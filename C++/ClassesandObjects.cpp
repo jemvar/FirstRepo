@@ -1,6 +1,7 @@
 #include <iostream>
 // #include "Person.h"
 #include "Tweeter.h"
+using namespace std;
 
 int main(int argc, char const *argv[])
 {
@@ -8,6 +9,6 @@ int main(int argc, char const *argv[])
 	{
 		Tweeter p1("Aashi","Malhotra",221,"@aashi");
 	}
-	std::cout<<"Exiting Function main"<<std::endl;
+	cout<<"Exiting Function main"<<endl;
 	return 0;
 }
