@@ -1,0 +1,12 @@
+		header
+		{
+			background-color: lightgray;
+			border: solid 1px black;
+			/*More Specific Styling of headder wins over the generic styling of body*/
+			font-family: 'Times New Roman'; 
+		}
+		body
+		{
+			font-size: 14px;
+			font-family: Segoe UI, Arial; 
+		}
