@@ -5,10 +5,24 @@
 	<!--[if LT IE 9]>
 		do sthg()
 	<![endif]-->
+	<style>
+		header
+		{
+			background-color: lightgray;
+			border: solid 1px black;
+			/*More Specific Styling of headder wins over the generic styling of body*/
+			font-family: 'Times New Roman'; 
+		}
+		body
+		{
+			font-size: 14px;
+			font-family: Segoe UI, Arial; 
+		}
+	</style>
 </head>
 <body>
 	<header>
-		<div><img src="images/hello.jpeg"/></div>
+		<div><img src="images/hello.jpeg" style="width: 50%; height: 50%" /></div>
 		<div>This is site for searching <a href="http://github.com">Github</a> projects</div>
 		<nav>
 			<ul>
