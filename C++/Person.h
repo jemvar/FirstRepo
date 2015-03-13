@@ -21,6 +21,7 @@ public:
 	}
 	bool operator<(Person& p);
 	bool operator<(int n);
+	friend bool operator<(int n, Person& p);
 };
 
 bool operator<(int n, Person& p);

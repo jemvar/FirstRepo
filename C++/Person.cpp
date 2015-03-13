@@ -29,5 +29,5 @@ bool Person::operator<(int n)
 
 bool operator<(int n, Person& p)
 {
-	return n < p.getNumber();
+	return n < p.arbitrarynumber;
 }
