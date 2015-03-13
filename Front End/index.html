@@ -16,7 +16,18 @@
 		</nav>	
 	</header>
 	<section>
-		<p>You could do <em>interesting</em> things here. <span>First Time</span> <strong>i am creating</strong> lets see how it goes</p>		
+		<p>You could do <em>interesting</em> things here. <span>First Time</span> <strong>i am creating</strong> lets see how it goes</p>
+		<form action="tryphp.php">
+			SearchPhrase: <input name="searchPhrase" /><br>
+			<input type="checkbox" name="useStars" checked>Use Stars?<br>
+			Language Choice: <select name="langChoice">
+				<option>All</option>
+				<option>C++</option>
+				<option selected>Java</option>
+				<option>C#</option>
+			</select><br>
+			<input name="Submit" type="Submit" value="Search"\>
+		</form>
 	</section>
 	<footer>
 		&copy; Varun Malhotra 2015 &#x150;
