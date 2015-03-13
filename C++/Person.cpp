@@ -16,3 +16,18 @@ string Person::getName()
 {
 	return firstname+" "+lastname;
 }
+
+bool Person::operator<(Person& p)
+{
+	return arbitrarynumber < p.arbitrarynumber;
+}
+
+bool Person::operator<(int n)
+{
+	return arbitrarynumber < n;
+}
+
+bool operator<(int n, Person& p)
+{
+	return n < p.getNumber();
+}

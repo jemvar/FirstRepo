@@ -19,4 +19,8 @@ public:
 	{
 		arbitrarynumber = number;
 	}
+	bool operator<(Person& p);
+	bool operator<(int n);
 };
+
+bool operator<(int n, Person& p);
