@@ -16,4 +16,8 @@ $(document).ready(function()
 			toggleButton.text("Hide");
 		};
 	})	
-};)
+})
+
+var listItems = $("header nav li");
+listItems.css("font-weight","bold");
+listItems.filter(":first").css("font-size","18px");
