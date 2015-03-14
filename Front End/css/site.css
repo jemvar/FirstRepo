@@ -29,9 +29,21 @@ html, body
 	border-radius: 2px;
 }
 
+#results
+{
+	padding: 2px;
+	width: 600px;
+	display: inline-block;
+	vertical-align: top;;
+}
+
 .simple-form
 {
 	padding: 2px;
+	width: 300px;
+	/*position: absolute; Position could be fixed ( fixed in hierarchy), absolute ( fixed on the entire page) or static (default)*/
+	display: inline-block;
+	vertical-align: top;
 }
 
 #main
