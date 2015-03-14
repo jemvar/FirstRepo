@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Github</title>
+	<!--[if LT IE 9]>
+		do sthg()
+	<![endif]-->
+	<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+	<div class="container">
+		<header>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<li><a href="about.html">About</a></li>
+				</ul>
+			</nav>	
+			<div><img src="images/hello.jpeg" style="width: 50%; height: 50%" class="bordered-image" /></div>
+			<div>This is site for searching <a href="http://github.com">Github</a> projects</div>
+		</header>
+		<section id="main">
+			<p>You could do <em>interesting</em> things here. <span>First Time</span> <strong>i am creating</strong> lets see how it goes</p>
+			<form action="tryphp.php" class="bordered-image simple-form" id="gitHubSearchForm">
+				<label for="searchPhrase">SearchPhrase:</label>
+				<input name="searchPhrase" id="searchPhrase" /><br>
+				<input type="checkbox" name="useStars" id="useStars" checked>
+				<label for="useStars">Use Stars?</label><br>
+				<label for="langChoice">Language Choice:</label>
+				<select name="langChoice" id="langChoice">
+					<option>All</option>
+					<option>C++</option>
+					<option selected>Java</option>
+					<option>C#</option>
+				</select><br>
+				<input name="Submit" type="Submit" value="Search"\>
+			</form>
+			<div id="results" class="bordered-image">
+				<button id="toggleButton">Hide</button>
+				<div id="resultList"></div>
+			</div>
+		</section>
+		<footer>
+			&copy; Varun Malhotra 2015;
+		</footer>
+	</div>
+	<script type="text/javascript" src="js/jquery-2.1.3.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
