@@ -1,12 +1,24 @@
-		header
-		{
-			background-color: lightgray;
-			border: solid 1px black;
-			/*More Specific Styling of headder wins over the generic styling of body*/
-			font-family: 'Times New Roman'; 
-		}
-		body
-		{
-			font-size: 14px;
-			font-family: Segoe UI, Arial; 
-		}
+header, footer
+{
+	background-color: lightgray;
+	border: solid 1px black;
+	/*More Specific Styling of headder wins over the generic styling of body*/
+	font-family: 'Times New Roman'; 
+}
+footer
+{
+	padding: 10px;
+	border-radius: 3px;
+}
+body
+{
+	font-size: 14px;
+	font-family: Segoe UI, Arial; 
+}
+#main
+{
+	border: solid 1px #ccc;
+	border-radius: 5px;
+	margin: 20px 0;
+	padding: 5px;
+}
