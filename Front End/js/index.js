@@ -54,10 +54,10 @@
 // }
 // showIt("hello");
 
-// function showItFinal (mssg, callback) {
-// 	console.log(mssg);
-// 	callback();
-// }
+function showItFinal (mssg, callback) {
+	console.log(mssg);
+	callback();
+}
 // showItFinal("showItFinal called", function() {console.log("callback called");});
 
 // Scope
@@ -67,6 +67,10 @@ function test () {
 	console.log("inGlobal is "+inGlobal);
 	var insideTest = true;
 	console.log("insideTest is "+insideTest);
+	showItFinal("called from test", function() {
+		console.log("callback from test, local var insideTest is "+insideTest);// Closure ( a function which has access to its parent function scope)
+	})
+
 }
 test();
 console.log("insideTest is "+insideTest);
