@@ -81,8 +81,22 @@ html, body
 	padding: 5px;
 }
 
+header nav
+{
+	float: right;
+	margin-right: 5px;
+}
 
+header nav li
+{
+	display: inline;
+	font-size: 12px;
+}
 
+a
+{
+	color: green;
+}
 
 
 
