@@ -16,30 +16,45 @@ $(document).ready(function()
 		};
 	});
 
-	var gitHubSearch = "https://api.github.com/search/repositories?q=jquery+language:javascript";
-	$.get(gitHubSearch)
-		.success
-		(
-			function (r) 
-			{
-				displayItems(r.items);
-			}
-		)
-		.fail
-		(
-			function (err) 
-			{
-				console.log("The following error occured: "+err);
-			}
-		)
-		.done
-		(
-			function() 
-			{
+	var gitHubSearchForm = $("#gitHubSearchForm").on("submit", function () {
+		var searchPhrase = $("#searchPhrase").val();
+		var useStars = $("#useStars").val();
+		var langChoice = $("#langChoice").val();
+
+		if(searchPhrase)
+		{
+			resultList.text("Performing Search ...");
+			var gitHubSearch = "https://api.github.com/search/repositories?q="+encodeURIComponent(searchPhrase);
+			if(langChoice != "All")
+				gitHubSearch = gitHubSearch+"+language:"+encodeURIComponent(langChoice);
+			if(useStars)
+				gitHubSearch = gitHubSearch+"&sort=stars";
+			$.get(gitHubSearch)
+			.success
+			(
+				function (r) 
+				{
+					displayItems(r.items);
+				}
+				)
+			.fail
+			(
+				function (err) 
+				{
+					console.log("The following error occured: "+err);
+				}
+				)
+			.done
+			(
+				function() 
+				{
 				//finally
 			}
-		);
-		
+			);
+		}
+		return false;
+	});
+
 	function displayItems(results) {
 		resultList.empty();
 		$.each(results, function (i, item) {
