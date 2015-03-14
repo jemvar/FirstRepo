@@ -1,0 +1,10 @@
+"use strict";
+var mssg = "hello JS";
+console.log(mssg);
+var resultsDiv = document.getElementById("results");
+resultsDiv.innerHTML = "<p> This is from JS</p>";
+console.log(typeof(mssg));
+console.log(typeof(resultsDiv));
+var a;
+console.log(typeof(a));
+// bavv = "new str";
