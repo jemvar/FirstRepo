@@ -39,27 +39,37 @@
 
 // Function
 
-function show(mssg)
-{
-	console.log("show1 "+mssg);
-}
-function show (mssg, more) {
-	console.log("show2 "+mssg+" "+more);
-}
-show("hello");
-show("hello","world");
+// function show(mssg)
+// {
+// 	console.log("show1 "+mssg);
+// }
+// function show (mssg, more) {
+// 	console.log("show2 "+mssg+" "+more);
+// }
+// show("hello");
+// show("hello","world");
 
-var showIt = function print (mssg) {
-	console.log("printing "+ mssg);
-}
-showIt("hello");
+// var showIt = function print (mssg) {
+// 	console.log("printing "+ mssg);
+// }
+// showIt("hello");
 
-function showItFinal (mssg, callback) {
-	console.log(mssg);
-	callback();
-}
-showItFinal("showItFinal called", function() {console.log("callback called");});
+// function showItFinal (mssg, callback) {
+// 	console.log(mssg);
+// 	callback();
+// }
+// showItFinal("showItFinal called", function() {console.log("callback called");});
 
+// Scope
+
+var inGlobal = true;
+function test () {
+	console.log("inGlobal is "+inGlobal);
+	var insideTest = true;
+	console.log("insideTest is "+insideTest);
+}
+test();
+console.log("insideTest is "+insideTest);
 
 
 
